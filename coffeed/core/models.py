@@ -1,11 +1,8 @@
+from django.core.urlresolvers import reverse
 from django.db import models
 
 
 class TimeStampedModel(models.Manager):
-    """
-    An abstract base class model that provides self-updating
-    ``created`` and ``modified`` fields.
-    """
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
 
@@ -20,3 +17,9 @@ class Item(TimeStampedModel):
 class Order(TimeStampedModel):
     pass
 
+
+class Author(models.Model):
+    name = models.CharField(max_length=200)
+
+    def get_absolute_url(self):
+        return reverse('author-detail', kwargs={'pk': self.pk})
