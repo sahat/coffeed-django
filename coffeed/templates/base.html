@@ -59,17 +59,25 @@
       <h2>{{ user }}</h2>
 
       {% block content %}
-        <h3>To Sell</h3>
-        <ul>
-            <li><a href="#">Order</a></li>
-            <li><a href="#">View existing orders</a></li>
-        </ul>
+      <div class="row">
+        <div class="span5 alert alert-info">
+          <h3>To Sell</h3>
+          <ul>
+              <li><a href="/order/">Order</a></li>
+              <li><a href="#">View existing orders</a></li>
+          </ul>
+        </div>
+        <div class="span5 well alert alert-success">
+          <h3>To Create</h3>
+          <ul>
+              <li><a href="#">Order</a></li>
+              <li><a href="#">View existing orders</a></li>
+          </ul>
+        </div>
+      </div>
 
-       <h3>To Create</h3>
-        <ul>
-            <li><a href="#">Order</a></li>
-            <li><a href="#">View existing orders</a></li>
-        </ul>
+
+
       {% endblock content %}
 
     </div> <!-- /container -->

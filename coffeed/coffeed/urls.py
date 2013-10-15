@@ -5,10 +5,6 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', TemplateView.as_view(template_name='base.html')),
-    url(r'^accounts/', include('registration.backends.simple.urls')),
-    #url(r'^$', 'coffeed.views.home', name='home'),
-    url(r'^coffeed/', include('mainapp.urls')),
-
+    url(r'^$', include('orders.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )

@@ -2,7 +2,7 @@ from django.views.generic import DetailView, ListView, FormView, CreateView, Upd
 from django.core.urlresolvers import reverse_lazy
 from braces.views import LoginRequiredMixin
 
-from models import Item, Order, Author
+from models import Item, Order
 from forms import OrderForm
 
 
@@ -35,6 +35,6 @@ class OrderUpdate(UpdateView):
     model = Order
 
 
-class OrderDelete(DeleteView):
-    model = Author
-    success_url = reverse_lazy('author-list')
+#class OrderDelete(DeleteView):
+#    model = Author
+#    success_url = reverse_lazy('author-list')
