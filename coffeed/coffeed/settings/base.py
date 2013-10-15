@@ -198,6 +198,8 @@ THIRD_PARTY_APPS = (
     'registration',
 )
 
+ACCOUNT_ACTIVATION_DAYS = 7
+
 # Apps specific for this project go here.
 LOCAL_APPS = (
 )
