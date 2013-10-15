@@ -185,7 +185,7 @@ DJANGO_APPS = (
     'django.contrib.staticfiles',
 
     # Admin panel and themes:
-    'django_admin_bootstrapped',
+    'suit',
     'django.contrib.admin',
 )
 
