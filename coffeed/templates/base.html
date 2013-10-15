@@ -54,10 +54,21 @@
 
     <div class="container">
 
-      <h1>{% block page_title %}Example Base Template{% endblock page_title %}</h1>
+      <h1>{% block page_title %}Coffeed Order System{% endblock page_title %}</h1>
+      <hr/>
 
       {% block content %}
-        <p>Use this document as a way to quick start any new project.</p>
+        <h3>To Sell</h3>
+        <ul>
+            <li><a href="#">Order</a></li>
+            <li><a href="#">View existing orders</a></li>
+        </ul>
+
+       <h3>To Create</h3>
+        <ul>
+            <li><a href="#">Order</a></li>
+            <li><a href="#">View existing orders</a></li>
+        </ul>
       {% endblock content %}
 
     </div> <!-- /container -->
